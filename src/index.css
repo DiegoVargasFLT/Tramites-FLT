@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Primary Brand Colors - Lagos de Torca */
+  --color-torca-azul: #61B1E3;
+  --color-rio-verde: #74C6D3;
+  --color-azul-oceano: #1F3B6F;
+  --color-violeta-aereo: #332664;
+  
+  /* Secondary Brand Colors */
+  --color-crema-expreso: #F8F1E1;
+  --color-rojo-hibisco: #AD1924;
+  --color-verde-nocturno: #025850;
+  --color-luz-solar: #D97706; /* Cambiado de amarillo a Ámbar profundo */
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes pulseSubtle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.95; transform: scale(1.005); }
+  }
+
+  .animate-pulse-subtle {
+    animation: pulseSubtle 1.5s ease-in-out infinite;
+  }
+}
